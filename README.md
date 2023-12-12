@@ -1,73 +1,40 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# What is Observability?
+Observability refers to the ability to monitor, measure, and understand the state of a system or application by examining its outputs, logs, and performance metrics. In modern software systems and cloud computing, Observability plays an increasingly crucial role in ensuring the reliability, performance, and security of applications and infrastructure.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+### Pillars of Observability
+ - Logs
+ - Metrics
+ - Tracing
 
-## Description
+## Logs 
+Logs are discrete events with the goal of helping engineers identify problem area(s) during failures.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+### Logging with Prometheus, Loki, Grafana, Pino, and Pino-Loki
+- Prometheus: Used for logging metrics.
+- Loki: A horizontally-scalable, highly-available, multi-tenant log aggregation system.
+- Grafana: For visualizing logs.
+- Pino: Fast, low-overhead Node.js logger.
+- Pino-Loki: Streams Pino logs to Loki.
 
-## Installation
+![](https://raw.githubusercontent.com/alirezanqp/observability/main/images/Screenshot%20from%202023-12-12%2015-29-42.png)
 
-```bash
-$ npm install
-```
+## Metrics
+Metrics are numerical representations of data used to monitor and observe system behavior over time. You can use it to ensure the system performs as expected, identify potential problems, measure business goals, etc.
 
-## Running the app
+### Metrics with Prometheus and Grafana
+- Prometheus: An open-source monitoring system with a dimensional data model.
+- Grafana: An open-source platform for monitoring and observability.
 
-```bash
-# development
-$ npm run start
+![](https://raw.githubusercontent.com/alirezanqp/observability/main/images/Screenshot%20from%202023-12-12%2015-32-00.png)
 
-# watch mode
-$ npm run start:dev
+## Tracing 
+Tracing is an observability tool that records the path taken by a request as it propagates through your application(s). Traces help you link the activities that your system is performing in response to any particular request. Traces also provide timing information (e.g., start time, duration, etc.) about these activities.
 
-# production mode
-$ npm run start:prod
-```
+### Tracing with OpenTelemetry and Jaeger
+- OpenTelemetry: Provides instrumentation for monitoring application performance.
+- Jaeger: A distributed tracing system.
 
-## Test
+![](https://raw.githubusercontent.com/alirezanqp/observability/main/images/Screenshot%20from%202023-12-12%2015-34-49.png)
 
-```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
