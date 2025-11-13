@@ -38,5 +38,7 @@ Tracing is an observability tool that records the path taken by a request as it 
 ![](https://raw.githubusercontent.com/alirezanqp/observability/main/images/Screenshot%20from%202023-12-12%2015-34-49.png)
 
 ## Todo
+
 - add postgresql metrics
 - add redis metrics
+  
